@@ -1,0 +1,33 @@
+.checkout {
+  padding: 40px;
+  color: white;
+}
+
+.checkout h1 {
+  margin-bottom: 20px;
+}
+
+.checkout-items {
+  margin-bottom: 20px;
+}
+
+.checkout-item {
+  background: #111;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.total {
+  margin-top: 20px;
+}
+
+.order-btn {
+  margin-top: 20px;
+  padding: 12px 20px;
+  border-radius: 25px;
+  border: none;
+  background: linear-gradient(135deg, orange, #ff3c00);
+  color: white;
+  cursor: pointer;
+}

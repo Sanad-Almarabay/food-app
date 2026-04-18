@@ -1,0 +1,1283 @@
+/* GLOBAL */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0a0a0a, #1a0f00);
+  color: white;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: rgba(20,20,20,0.7);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,140,0,0.2);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: orange;
+}
+
+/* BUTTON */
+button {
+  background: linear-gradient(135deg, orange, #ff3c00);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px orange;
+}
+
+/* MENU GRID */
+.menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  padding: 30px;
+}
+
+/* CARD */
+.card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 15px;
+  overflow: hidden;
+  padding: 10px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(255,140,0,0.3);
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.price {
+  color: orange;
+  font-weight: bold;
+}
+
+/* 🔍 SEARCH BAR */
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.search-box {
+  position: relative;
+  width: 280px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 12px 15px 12px 40px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  background: rgba(255,255,255,0.08);
+  color: white;
+  transition: 0.3s;
+}
+
+.search-box input:focus {
+  box-shadow: 0 0 10px orange;
+}
+
+/* ICONS */
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: orange;
+}
+
+.clear-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #aaa;
+}
+
+.clear-icon:hover {
+  color: orange;
+}
+.hero {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.hero h1 {
+  font-size: 50px;
+  color: orange;
+}
+
+.hero p {
+  opacity: 0.7;
+  margin-top: 10px;
+}/* CHECKOUT PAGE */
+.checkout-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.checkout-card {
+  width: 100%;
+  max-width: 500px;
+  background: rgba(255,255,255,0.05);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(255,140,0,0.2);
+}
+
+.checkout-card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* sections */
+.checkout-section {
+  margin-bottom: 20px;
+}
+
+/* items */
+.checkout-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.checkout-total {
+  margin-top: 10px;
+  font-weight: bold;
+  color: orange;
+}
+
+/* input */
+.checkout-card input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  margin-top: 5px;
+  background: rgba(255,255,255,0.08);
+  color: white;
+}
+
+/* payment */
+.checkout-section label {
+  display: block;
+  margin-top: 5px;
+}
+
+/* button */
+.checkout-btn {
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 25px;
+  border: none;
+  background: linear-gradient(135deg, orange, #ff3c00);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.checkout-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px orange;
+}.success-container {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.success-card {
+  background: rgba(255,255,255,0.05);
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(255,140,0,0.3);
+}
+
+.success-card h1 {
+  color: orange;
+}
+
+.success-card button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  background: linear-gradient(135deg, orange, #ff3c00);
+  color: white;
+  cursor: pointer;
+}
+/* AUTH PAGES */
+.auth-container {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-card {
+  background: rgba(255,255,255,0.05);
+  padding: 30px;
+  border-radius: 15px;
+  width: 300px;
+  text-align: center;
+}
+
+.auth-card input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255,255,255,0.08);
+  color: white;
+}
+
+.auth-card button {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.auth-link {
+  margin-top: 10px;
+  cursor: pointer;
+  color: orange;
+}.navbar a {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar a:hover {
+  color: orange;
+}/* 🔥 BACKGROUND */
+.auth-bg {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at top, #1a1a1a, #000);
+}
+
+/* ✨ GLASS CARD */
+.auth-glass {
+  width: 320px;
+  padding: 40px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 40px rgba(255,140,0,0.3);
+  text-align: center;
+}
+
+/* TITLE */
+.auth-glass h1 {
+  margin-bottom: 20px;
+  color: orange;
+}
+
+/* INPUTS */
+.auth-glass input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: rgba(255,255,255,0.08);
+  color: white;
+  transition: 0.3s;
+}
+
+.auth-glass input:focus {
+  box-shadow: 0 0 10px orange;
+}
+
+/* BUTTON */
+.auth-glass button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 25px;
+  border: none;
+  background: linear-gradient(135deg, orange, #ff3c00);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.auth-glass button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px orange;
+}
+
+/* LINK */
+.auth-glass p {
+  margin-top: 15px;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.auth-glass p:hover {
+  color: orange;
+}/* 🔐 PASSWORD RULES BOX */
+.password-rules {
+  margin-top: 12px;
+  padding: 10px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(8px);
+  text-align: left;
+  font-size: 13px;
+}
+
+/* spacing */
+.password-rules p {
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ❌ invalid */
+.password-rules .invalid {
+  color: #ff4d4d;
+  opacity: 0.8;
+}
+
+/* ✅ valid */
+.password-rules .valid {
+  color: #4dff88;
+  font-weight: 500;
+}/* RULES CARD */
+.rules-card {
+  margin-top: 15px;
+  padding: 15px;
+  border-radius: 15px;
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(255,140,0,0.1);
+}
+
+/* RULE ITEM */
+.rule {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  margin-bottom: 8px;
+  color: #aaa;
+}
+
+/* ICON */
+.rule-icon {
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  border-radius: 50%;
+  background: #333;
+}
+
+/* VALID */
+.rule.valid {
+  color: #4dff88;
+}
+
+.rule.valid .rule-icon {
+  background: linear-gradient(135deg, #4dff88, #00cc66);
+  color: black;
+  box-shadow: 0 0 10px rgba(77,255,136,0.6);
+}/* PARTICLES FIX */
+.auth-bg canvas {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+}
+
+/* PASSWORD WRAPPER */
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper span {
+  position: absolute;
+  right: 10px;
+  top: 12px;
+  cursor: pointer;
+}
+
+/* 🔒 STRENGTH BAR */
+.strength-bar {
+  height: 6px;
+  border-radius: 5px;
+  background: #222;
+  margin-top: 8px;
+}
+
+.strength {
+  height: 100%;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+/* levels */
+.strength-1 { width: 33%; background: red; }
+.strength-2 { width: 66%; background: orange; }
+.strength-3 { width: 100%; background: lime; }
+/* 🌈 GRADIENT TEXT */
+.gradient-text {
+  font-size: 26px;
+  background: linear-gradient(270deg, orange, #ff3c00, gold);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 5s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% }
+  50% { background-position: 100% }
+  100% { background-position: 0% }
+}
+
+/* 🔥 INSANE CARD */
+.insane-card {
+  position: relative;
+  overflow: hidden;
+  transform-style: preserve-3d;
+}
+
+/* ✨ FLOATING ORBS */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(40px);
+  opacity: 0.3;
+}
+
+.orb1 {
+  width: 120px;
+  height: 120px;
+  background: orange;
+  top: -20px;
+  left: -20px;
+}
+
+.orb2 {
+  width: 150px;
+  height: 150px;
+  background: red;
+  bottom: -30px;
+  right: -30px;
+}
+
+/* 💡 GLOW BUTTON */
+.glow-btn {
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 25px;
+  border: none;
+  background: linear-gradient(135deg, orange, #ff3c00);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.glow-btn:hover {
+  box-shadow: 0 0 25px orange, 0 0 50px red;
+  transform: scale(1.07);
+}
+
+/* ✨ INPUT HOVER EFFECT */
+.auth-glass input:hover {
+  transform: scale(1.02);
+}
+
+/* 🎬 SMOOTH EVERYTHING */
+.auth-glass * {
+  transition: all 0.3s ease;
+}
+/* 🌌 MOUSE GLOW */
+.mouse-glow {
+  position: fixed;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(255,140,0,0.4), transparent);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  filter: blur(40px);
+  z-index: 0;
+}
+
+/* 🎮 3D CARD */
+.boss-card {
+  position: relative;
+  z-index: 2;
+  transform-style: preserve-3d;
+}
+
+/* 🌈 GRADIENT TEXT */
+.gradient-text {
+  background: linear-gradient(270deg, orange, red, gold);
+  background-size: 400% 400%;
+  animation: gradientMove 6s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% }
+  50% { background-position: 100% }
+  100% { background-position: 0% }
+}
+
+/* ✨ ORBS */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(50px);
+  opacity: 0.3;
+}
+
+.orb1 {
+  width: 150px;
+  height: 150px;
+  background: orange;
+  top: -30px;
+  left: -30px;
+}
+
+.orb2 {
+  width: 180px;
+  height: 180px;
+  background: red;
+  bottom: -40px;
+  right: -40px;
+}
+
+/* 🔥 BUTTON */
+.glow-btn:hover {
+  box-shadow: 0 0 40px orange, 0 0 80px red;
+}/* CLEAN CARD */
+.clean-card {
+  width: 320px;
+  padding: 35px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* TITLE */
+.clean-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: orange;
+  font-weight: 600;
+}
+
+/* INPUT */
+.clean-card input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255,255,255,0.08);
+  color: white;
+  transition: 0.2s;
+}
+
+.clean-card input:focus {
+  box-shadow: 0 0 8px rgba(255,140,0,0.5);
+}
+
+/* BUTTON */
+.clean-btn {
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 25px;
+  border: none;
+  background: linear-gradient(135deg, orange, #ff3c00);
+  color: white;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.clean-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255,140,0,0.4);
+}
+
+/* PASSWORD WRAPPER */
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper span {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  cursor: pointer;
+}
+
+/* STRENGTH BAR */
+.strength-bar {
+  height: 6px;
+  background: #222;
+  border-radius: 5px;
+  margin-top: 8px;
+}
+
+.strength {
+  height: 100%;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.strength-1 { width: 33%; background: red; }
+.strength-2 { width: 66%; background: orange; }
+.strength-3 { width: 100%; background: lime; }/* ✨ INPUT BASE */
+.clean-card input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  background: rgba(255,255,255,0.08);
+  color: white;
+  transition: all 0.25s ease;
+}
+
+/* 🔥 HIGHLIGHT ON FOCUS */
+.clean-card input:focus {
+  outline: none;
+  border: 1px solid orange;
+  box-shadow: 0 0 10px rgba(255,140,0,0.5);
+  transform: scale(1.02);
+}
+
+/* 🧠 HOVER FEEDBACK */
+.clean-card input:hover {
+  border: 1px solid rgba(255,140,0,0.4);
+}
+
+/* ✨ BUTTON */
+.clean-btn {
+  width: 100%;
+  margin-top: 18px;
+  padding: 12px;
+  border-radius: 25px;
+  border: none;
+  background: linear-gradient(135deg, orange, #ff3c00);
+  color: white;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.clean-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255,140,0,0.4);
+}/* 🌈 TITLE GRADIENT */
+.gradient-title {
+  background: linear-gradient(90deg, orange, gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ✨ CARD EXTRA TOUCH */
+.fancy-card {
+  position: relative;
+  overflow: hidden;
+}
+
+/* subtle glowing line */
+.fancy-card::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  top: 0;
+  left: 0;
+  background: linear-gradient(90deg, orange, red);
+  opacity: 0.6;
+}
+
+/* 📦 INPUT GROUP */
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  background: rgba(255,255,255,0.05);
+  padding: 10px;
+  border-radius: 10px;
+  transition: 0.25s;
+}
+
+.input-group span {
+  opacity: 0.7;
+}
+
+.input-group input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: white;
+  outline: none;
+}
+
+/* 🔥 HOVER */
+.input-group:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+/* ✨ FOCUS GLOW */
+.input-group:focus-within {
+  box-shadow: 0 0 10px rgba(255,140,0,0.4);
+}
+
+/* 💡 BUTTON */
+.fancy-btn:hover {
+  box-shadow: 0 0 20px orange;
+}.auth-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0d0d0d;
+}
+
+/* CARD */
+.auth-box {
+  width: 320px;
+  padding: 40px;
+  border-radius: 12px;
+  background: #111;
+}
+
+/* TITLE */
+.auth-box h2 {
+  margin-bottom: 25px;
+  font-weight: 500;
+}
+
+/* FIELD */
+.field {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.field input {
+  width: 100%;
+  padding: 10px 5px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #555;
+  color: white;
+  outline: none;
+}
+
+.field label {
+  position: absolute;
+  left: 5px;
+  top: 10px;
+  font-size: 14px;
+  color: #777;
+  pointer-events: none;
+  transition: 0.2s;
+}
+
+/* FLOAT EFFECT */
+.field input:focus + label,
+.field input:valid + label {
+  top: -10px;
+  font-size: 11px;
+  color: orange;
+}
+
+/* FOCUS LINE */
+.field input:focus {
+  border-bottom: 1px solid orange;
+}
+
+/* BUTTON */
+.auth-box button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: orange;
+  color: black;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* LINK */
+.auth-box p {
+  margin-top: 15px;
+  font-size: 13px;
+  color: #888;
+  cursor: pointer;
+}
+
+.auth-box p:hover {
+  color: white;
+}/* BACKGROUND */
+.boss-bg {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at top, #1a1a1a, #000);
+}
+
+/* CARD */
+.boss-card {
+  width: 340px;
+  padding: 40px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* TITLE */
+.boss-card h1 {
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  color: #888;
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+
+/* FIELD */
+.field {
+  position: relative;
+  margin-bottom: 22px;
+}
+
+.field input {
+  width: 100%;
+  padding: 10px 5px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #555;
+  color: white;
+  outline: none;
+  transition: 0.3s;
+}
+
+.field label {
+  position: absolute;
+  left: 5px;
+  top: 10px;
+  font-size: 14px;
+  color: #777;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+/* FLOAT LABEL */
+.field input:focus + label,
+.field input:valid + label {
+  top: -12px;
+  font-size: 11px;
+  color: orange;
+}
+
+/* LINE ANIMATION */
+.field input:focus {
+  border-bottom: 1px solid orange;
+}
+
+/* BUTTON */
+.boss-card button {
+  width: 100%;
+  padding: 11px;
+  border-radius: 25px;
+  border: none;
+  background: linear-gradient(135deg, orange, #ff3c00);
+  color: white;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.boss-card button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255,140,0,0.4);
+}
+
+/* LINK */
+.boss-card span {
+  display: block;
+  margin-top: 15px;
+  color: #888;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.boss-card span:hover {
+  color: white;
+}/* LAYOUT */
+.split-page {
+  display: flex;
+  height: 100vh;
+}
+
+/* LEFT SIDE */
+.left-panel {
+  flex: 1;
+  background: linear-gradient(135deg, #ff7a18, #ff3c00);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.left-panel h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.left-panel p {
+  opacity: 0.8;
+}
+
+/* RIGHT SIDE */
+.right-panel {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0d0d0d;
+}
+
+/* FORM */
+.form-box {
+  width: 320px;
+}
+
+.form-box h2 {
+  margin-bottom: 20px;
+}
+
+/* INPUT */
+.form-box input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background: #111;
+  color: white;
+}
+
+.form-box input:focus {
+  border: 1px solid orange;
+}
+
+/* BUTTON */
+.form-box button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 25px;
+  border: none;
+  background: linear-gradient(135deg, orange, #ff3c00);
+  color: white;
+  cursor: pointer;
+}
+
+/* LINK */
+.form-box span {
+  display: block;
+  margin-top: 12px;
+  color: #888;
+  cursor: pointer;
+}
+
+.form-box span:hover {
+  color: white;
+}.auth-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at top, #1a1a1a, #000);
+}
+
+/* CARD */
+.auth-card-v2 {
+  width: 330px;
+  padding: 40px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+  text-align: center;
+}
+
+/* BRAND */
+.brand {
+  font-size: 28px;
+  color: orange;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  color: #888;
+  margin-bottom: 25px;
+}
+
+/* INPUT */
+.input-v2 input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: 1px solid #333;
+  background: #111;
+  color: white;
+  transition: 0.2s;
+}
+
+.input-v2 input:focus {
+  border: 1px solid orange;
+  box-shadow: 0 0 10px rgba(255,140,0,0.3);
+}
+
+/* BUTTON */
+.btn-v2 {
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 25px;
+  border: none;
+  background: linear-gradient(135deg, orange, #ff3c00);
+  color: white;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.btn-v2:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255,140,0,0.4);
+}
+
+/* LINK */
+.switch {
+  margin-top: 15px;
+  color: #888;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.switch:hover {
+  color: white;
+}/* BACKGROUND */
+.lux-bg {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #050505;
+}
+
+/* CARD */
+.lux-card {
+  width: 320px;
+  padding: 45px 35px;
+  border-radius: 14px;
+  background: #0b0b0b;
+  border: 1px solid rgba(212,175,55,0.2);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+}
+
+/* LOGO */
+.lux-logo {
+  text-align: center;
+  font-size: 28px;
+  letter-spacing: 3px;
+  color: #d4af37;
+  margin-bottom: 5px;
+}
+
+/* SUBTEXT */
+.lux-sub {
+  text-align: center;
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+/* INPUT */
+.lux-input input {
+  width: 100%;
+  padding: 10px 0;
+  margin-top: 18px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #333;
+  color: white;
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s;
+}
+
+/* FOCUS */
+.lux-input input:focus {
+  border-bottom: 1px solid #d4af37;
+}
+
+/* BUTTON */
+.lux-btn {
+  width: 100%;
+  margin-top: 30px;
+  padding: 10px;
+  border-radius: 30px;
+  border: none;
+  background: linear-gradient(135deg, #d4af37, #b8962e);
+  color: black;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.lux-btn:hover {
+  box-shadow: 0 0 20px rgba(212,175,55,0.5);
+}
+
+/* LINK */
+.lux-switch {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 12px;
+  color: #777;
+  cursor: pointer;
+}
+
+.lux-switch:hover {
+  color: #d4af37;
+}.auth-bg {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at top, #1a1a1a, #000);
+}
+
+.clean-card {
+  width: 320px;
+  padding: 35px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.gradient-title {
+  text-align: center;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, orange, gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  background: rgba(255,255,255,0.05);
+  padding: 10px;
+  border-radius: 10px;
+  transition: 0.25s;
+}
+
+.input-group input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: white;
+  outline: none;
+}
+
+.input-group:focus-within {
+  box-shadow: 0 0 10px rgba(255,140,0,0.4);
+}
+
+.clean-btn {
+  width: 100%;
+  margin-top: 18px;
+  padding: 12px;
+  border-radius: 25px;
+  border: none;
+  background: linear-gradient(135deg, orange, #ff3c00);
+  color: white;
+  cursor: pointer;
+}
+
+.clean-btn:hover {
+  box-shadow: 0 0 20px orange;
+}
+
+.strength-bar {
+  height: 6px;
+  background: #222;
+  border-radius: 5px;
+  margin-top: 8px;
+}
+
+.strength {
+  height: 100%;
+  border-radius: 5px;
+}
+
+.strength-1 { width: 33%; background: red; }
+.strength-2 { width: 66%; background: orange; }
+.strength-3 { width: 100%; background: lime; }.error-msg {
+  color: #ff4d4d;
+  font-size: 13px;
+  margin-top: 8px;
+  text-align: left;
+}
